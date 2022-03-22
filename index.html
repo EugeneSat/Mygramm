@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="js/script.js" defer></script>
 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -15,6 +16,7 @@
 <body>
   <div class="wrapper">
       <nav class="nav ">
+
         <div class="nav_cont">
           <div class="nav__shape"></div>
 
@@ -24,7 +26,7 @@
 
           <div class="nav__data">
             <div class="nav__mask">
-              <img src="img/main.jpg" alt="User" class="nav__img">
+              <img src="img/main4.jpg" alt="User" class="nav__img">
             </div>
 
             <span class="nav__greeting">Whats up, I'm</span>
@@ -53,11 +55,53 @@
               </a>
             </li>
             <li class="nav__item">
-              <a href="#settings" class="nav__link">
+              <a href="#settings" class="nav__link setting_button">
                 <i class='bx bx-cog'></i> Settings
               </a>
+
+
             </li>
           </ul>
+        </div>
+
+
+        <div class="setting__nav">
+
+        <!--  <div class="nav__shape"></div>
+          <ul class="setting__list">
+            <li class="setting__item"><p class="setting__title">Main color</p>
+
+            <span class="theme-purple setting__sub">Purple</span>
+            <span class="theme-green setting__sub">Green</span>
+            <span class="theme-gray setting__sub">Gray</span>
+          </li>
+            <li class="setting__item "><p class="setting__title">Navbar color</p>
+            <span class="theme-white setting__sub">White</span>
+          <span class="theme-black setting__sub">Black</span>
+        </li>
+
+          </ul>
+        -->
+        <h2 class="setting__title">Navbar Color</h2>
+        <select id="theme" class="theme">
+                 <option value="purple" class="theme_option">Purple <i class='bx bx-moon change_theme'></i></option>
+                 <option value="green" class="theme_option">Green <i class='bx bx-sun'></i></option>
+                 <option value="gray" class="theme_option">Gray <i class='bx bx-sun'></i></option>
+                 <option value="blue" class="theme_option">Blue <i class='bx bx-sun'></i></option>
+
+               </select>
+          <h2 class="setting__title">Main Color</h2>
+          <select id="themee" class="themee">
+                   <option value="white" class="themee_option">White <i class='bx bx-moon change_theme'></i></option>
+                   <option value="black" class="themee_option">Black <i class='bx bx-sun'></i></option>
+
+
+                 </select>
+          <h2 class="setting__title"> <a href="#"  class="setting__upload_img ">Upload a new <br> main photo</a></h2> 
+          <div class="setting_close">
+            <i class="bx bx-x"></i>
+          </div>
+          <div class="setting__shape"></div>
         </div>
 
       </nav>

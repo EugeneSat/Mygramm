@@ -1,6 +1,11 @@
 $one: #24072F;
 $two: #3C5066;
 $tree: #ACBED3;
+$green: #072507;
+$gray: #212223;
+$blue: #040E32;
+$dark: #010309;
+
 //font-family: 'Bebas Neue', cursive;
 //font-family: 'Josefin Sans', sans-serif;
 
@@ -74,6 +79,7 @@ ul,li{
     top: -2rem;
     left: -2rem;
     filter: blur(90px);
+    z-index: 0;
   }
   .nav__close{
     position: relative;
@@ -208,7 +214,7 @@ ul,li{
   }
   .section{
     padding: 7rem 0 2rem;
-    
+
   }
 
   .nav{
@@ -234,4 +240,168 @@ ul,li{
     }
   }
 
+}
+
+//SETTING
+.setting__nav{
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+  z-index: 1;
+  transition: 0.4s;
+
+  .setting__shape{
+    width: 200px;
+    height: 200px;
+    background-color: $two;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 4rem;
+    left: -3rem;
+    filter: blur(90px);
+    z-index: 0;
+  }
+
+
+  .setting__list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+   .setting__title{
+     font-size: 18px;
+     z-index: 1;
+     margin-top: 30px;
+     font-weight: 700;
+     letter-spacing: 1px;
+     margin-bottom: 10px;
+
+      a{
+        color: white;
+
+        a:hover{
+          opacity: .6;
+        }
+     }
+
+   }
+   .setting__sub{
+     margin-top: 12px;
+     cursor: pointer;
+     color: $tree;
+     transition: 0.4s;
+
+     &:hover{
+       color: white;
+     }
+   }
+
+
+
+  .setting_close{
+    margin-top: 40px;
+    font-size: 22px;
+    padding: 6px;
+    border-radius: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.4s;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+
+    &:hover{
+      opacity: 0.4;
+    }
+    &:active{
+      opacity: 1;
+    }
+
+  }
+}
+.theme{
+  //margin-top: 10px;
+  //margin-bottom: 20px;
+  background-color: $one;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+
+}
+.themee{
+  background-color: $one;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.theme::after{
+  content: '';
+}
+
+//Color
+body.theme-green{
+  transition: 0.4s;
+  .nav{
+    background-color: $green;
+  }
+
+  .theme{
+    background-color: $green;
+    color: white;
+  }
+  .themee{
+    background-color: $green;
+    color: white;
+  }
+}
+body.theme-gray{
+  .nav{
+    background-color: $gray;
+  }
+  .theme{
+    background-color: $gray;
+    color: white;
+  }
+  .themee{
+    background-color: $gray;
+    color: white;
+  }
+}
+body.theme-blue{
+  .nav{
+    background-color: $blue;
+  }
+  .theme{
+    background-color: $blue;
+    color: white;
+  }
+  .themee{
+    background-color: $blue;
+    color: white;
+  }
+
+}
+body.themee-black{
+  .main{
+    background-color: $dark;
+    color: white;
+  }
+}
+body.themee-white{
+  .main{
+    background-color: white;
+    color: black;
+  }
 }

@@ -13,6 +13,58 @@ if (navClose) {
 if (headerToggle) {
   headerToggle.addEventListener('click', ()=>{
     main.classList.add('show__menu');
-    
+
   });
 }
+
+//Заход в настроки для смены цвета
+const setting = function() {
+  const navCont = document.querySelector('.nav_cont');
+  const settingNav = document.querySelector('.setting__nav');
+  const settingClose = document.querySelector('.setting_close');
+  const settingButton = document.querySelector('.setting_button');
+
+  if (settingButton) {
+    settingButton.addEventListener('click', ()=> {
+         navCont.style.display = 'none';
+         settingNav.style.display = 'inline-flex';
+    });
+
+  }
+
+  if (settingClose) {
+   settingClose.addEventListener('click', ()=> {
+     settingNav.style.display = 'none';
+        navCont.style.display = 'block';
+
+    });
+   }
+}
+
+
+setting();
+
+//смена цвета
+function appTheme(theme) {
+   document.body.classList.remove("theme-auto", "theme-green", "theme-gray", "theme-blue");
+   document.body.classList.add(`theme-${theme}`);
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+   document.querySelector("#theme").addEventListener("change", function() {
+        appTheme(this.value);
+   });
+});
+function appTheme2(themee) {
+   document.body.classList.remove("themee-auto", "themee-white", "themee-black");
+   document.body.classList.add(`themee-${themee}`);
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+   document.querySelector("#themee").addEventListener("change", function() {
+        appTheme2(this.value);
+   });
+});
+
+
+//Header fixed in mobile
