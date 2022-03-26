@@ -45,8 +45,11 @@ const setting = function() {
 setting();
 
 //смена цвета
+const color = function() {
+
+
 function appTheme(theme) {
-   document.body.classList.remove("theme-auto", "theme-green", "theme-gray", "theme-blue");
+   document.body.classList.remove("theme-auto", "theme-green", "theme-gray", "theme-blue", "theme-turquoise");
    document.body.classList.add(`theme-${theme}`);
 
 }
@@ -65,6 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
         appTheme2(this.value);
    });
 });
+}
+color();
 
 
 //Header fixed in mobile
+//Загрузка фото
+const foto = function() {
+   const settingInput = document.querySelector('.setting_input');
+   const navImg = document.querySelector('.nav__img');
+
+   settingInput.addEventListener('change', ()=> {
+       navImg.src = URL.createObjectURL(settingInput.files[0]);
+   });
+}
+foto();

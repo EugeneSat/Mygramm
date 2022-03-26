@@ -4,8 +4,8 @@ $tree: #ACBED3;
 $green: #072507;
 $gray: #212223;
 $blue: #040E32;
-$dark: #010309;
-
+$dark: #04060D;
+$ber: #054347;
 //font-family: 'Bebas Neue', cursive;
 //font-family: 'Josefin Sans', sans-serif;
 
@@ -46,7 +46,14 @@ img{
 ul,li{
   list-style-type: none;
 }
-
+input{
+  outline: none;
+  color: $one;
+  border: none;
+}
+a{
+  color: black;
+}
 .section{
   padding: 4rem 0 1rem;
 
@@ -60,6 +67,7 @@ ul,li{
   color: white;
   padding-top: 2rem;
   position: fixed;
+  transition: 0.4s;
 
   top: 0;
   left: 0;
@@ -68,6 +76,7 @@ ul,li{
   .nav_cont{
     margin-left: 25px;
     margin-right: 25px;
+    transition: 0.4s;
   }
 
   .nav__shape{
@@ -154,6 +163,9 @@ ul,li{
   padding-left: 15px;
   padding-right: 15px;
 
+}
+.HOME{
+  margin-top: 20px;
 }
 .header{
   width: 100%;
@@ -393,10 +405,37 @@ body.theme-blue{
   }
 
 }
+body.theme-turquoise{
+  .nav{
+    background-color: $ber;
+  }
+  .theme{
+    background-color: $ber;
+    color: white;
+  }
+  .themee{
+    background-color: $ber;
+    color: white;
+  }
+
+}
 body.themee-black{
   .main{
     background-color: $dark;
     color: white;
+  }
+  .add_card{
+    color: white;
+    background-color: $dark;
+
+  }
+  .friends_add{
+    color: white;
+    border: 2px solid $dark;
+
+  }
+  .friends_add:hover{
+    border-radius: 2px solid white;
   }
 }
 body.themee-white{
@@ -404,4 +443,126 @@ body.themee-white{
     background-color: white;
     color: black;
   }
+}
+
+
+
+
+//КНОПКА Upload
+.setting_upload_all{
+   position: static;
+
+   color: white;
+   border-radius: 10px;
+
+
+.setting_input{
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.set_label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -15px;
+  cursor: pointer;
+
+
+
+  .set_span{
+    font-size: 16px;
+    margin-left: 5px;
+  }
+   }
+}
+
+
+
+
+//ADD
+.add_card{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding:  50px 60px;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid #898D8D;
+  margin-top: 20px;
+  opacity: 0.5;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1;
+  }
+
+  .add_card_title{
+    margin-top: 15px;
+  }
+  .add_card_icon{
+    font-size: 32px;
+  }
+}
+// FRIENDS
+.friends_all{
+    margin-top: 20px;
+
+    .friends_add{
+      padding: 55px 60px;
+
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 20px;
+      transition: 0.4s;
+      .friends_card_title{
+        margin-top: 5px;
+      }
+      &:hover{
+
+        border: 2px solid $dark;
+        border-radius: 20px;
+      }
+    }
+  .friends__list{
+       display: inline-flex;
+
+       row-gap: 10px;
+       column-gap: 10px;
+      flex-wrap: wrap;
+
+    .friends_item{
+      max-width: 150px;
+      max-height: 150px;
+      border-radius: 20px;
+
+          .friends_link{
+
+                .friends__img{
+                  border-radius: 20px;
+                }
+          }
+    }
+  }
+}
+
+@media (max-width:350px) {
+  .friends_item{
+    width: 75px;
+    height: 75px;
+
+    .friends_add{
+      padding: 17px 20px;
+    }
+
+    .friends__img{
+      height: 75px;
+      width: 75px;
+    }
+  }
+
 }

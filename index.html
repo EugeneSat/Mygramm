@@ -29,7 +29,7 @@
               <img src="img/main4.jpg" alt="User" class="nav__img">
             </div>
 
-            <span class="nav__greeting">Whats up, I'm</span>
+            <span class="nav__greeting">Whats up, I'm </span>
             <h1 class="nav__name">Lada <br> Kamalovna </h1>
           </div>
 
@@ -88,6 +88,7 @@
                  <option value="green" class="theme_option">Green <i class='bx bx-sun'></i></option>
                  <option value="gray" class="theme_option">Gray <i class='bx bx-sun'></i></option>
                  <option value="blue" class="theme_option">Blue <i class='bx bx-sun'></i></option>
+                 <option value="turquoise" class="theme_option">Turquoise <i class='bx bx-sun'></i></option>
 
                </select>
           <h2 class="setting__title">Main Color</h2>
@@ -97,7 +98,20 @@
 
 
                  </select>
-          <h2 class="setting__title"> <a href="#"  class="setting__upload_img ">Upload a new <br> main photo</a></h2> 
+                 <h2 class="setting__title">Upload the main <br>photo</h2>
+                 <div class="setting_upload_all">
+                   <input type="file" placeholder="Загрузить" class="setting_input">
+                   <label for="file" class="set_label">
+                     <i class='bx bx-upload set_i'></i>
+                     <span class="set_span">Upload</span>
+                   </label>
+
+
+                 </div>
+
+
+
+
           <div class="setting_close">
             <i class="bx bx-x"></i>
           </div>
@@ -111,7 +125,7 @@
       <main class="main ">
         <header class="header">
           <nav class="header__nav">
-               <a href="#" class="header__logo">
+               <a href="#home" class="header__logo">
                  Kamalovna
                </a>
 
@@ -124,6 +138,10 @@
 <!-------------=======================HOME===============================--------------------->
         <section class="section section__height cont" id="home">
           <h1 class="HOME">HOME</h1>
+          <div class="add_card">
+            <i class='bx bxs-plus-circle add_card_icon'></i>
+            <span class="add_card_title">Add <br>post</span>
+          </div>
 
         </section>
 <!-------------=======================HOME===============================--------------------->
@@ -133,10 +151,63 @@
 <!-------------=======================HOME===============================--------------------->
         <section class="section section__height cont" id="friends">
          <h1 class="FRIENDS">FRIENDS</h1>
+
+         <div class="friends_all">
+           <ul class="friends__list">
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/about1.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/user1.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/User2.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/main3.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/user4.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/user5.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#" class="friends_link">
+                 <img src="img/user6.jpg" alt="Friend" class="friends__img">
+               </a>
+             </li>
+             <li class="friends_item">
+               <a href="#FRIENDS" class="friends_link">
+                 <div class="friends_add">
+                   <i class='bx bxs-plus-circle add_card_icon'></i>
+                   <span class="friends_card_title">Add</span>
+                 </div>
+               </a>
+             </li>
+
+           </ul>
+         </div>
           </section>
 <!-------------=======================HOME===============================--------------------->
         <section class="section section__height cont" id="photo">
           <h1 class="PHOTO">PHOTO</h1>
+          <div class="add_card">
+            <i class='bx bxs-plus-circle add_card_icon'></i>
+            <span class="add_card_title">Add</span>
+          </div>
           </section>
 
       </main>

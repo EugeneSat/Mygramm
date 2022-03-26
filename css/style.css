@@ -43,6 +43,16 @@ ul, li {
   list-style-type: none;
 }
 
+input {
+  outline: none;
+  color: #24072F;
+  border: none;
+}
+
+a {
+  color: black;
+}
+
 .section {
   padding: 4rem 0 1rem;
 }
@@ -56,6 +66,8 @@ ul, li {
   color: white;
   padding-top: 2rem;
   position: fixed;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,6 +76,8 @@ ul, li {
 .nav .nav_cont {
   margin-left: 25px;
   margin-right: 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 .nav .nav__shape {
   width: 200px;
@@ -160,6 +174,10 @@ ul, li {
   z-index: 10;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.HOME {
+  margin-top: 20px;
 }
 
 .header {
@@ -398,12 +416,156 @@ body.theme-blue .themee {
   color: white;
 }
 
-body.themee-black .main {
-  background-color: #010309;
+body.theme-turquoise .nav {
+  background-color: #054347;
+}
+body.theme-turquoise .theme {
+  background-color: #054347;
   color: white;
+}
+body.theme-turquoise .themee {
+  background-color: #054347;
+  color: white;
+}
+
+body.themee-black .main {
+  background-color: #04060D;
+  color: white;
+}
+body.themee-black .add_card {
+  color: white;
+  background-color: #04060D;
+}
+body.themee-black .friends_add {
+  color: white;
+  border: 2px solid #04060D;
+}
+body.themee-black .friends_add:hover {
+  border-radius: 2px solid white;
 }
 
 body.themee-white .main {
   background-color: white;
   color: black;
+}
+
+.setting_upload_all {
+  position: static;
+  color: white;
+  border-radius: 10px;
+}
+.setting_upload_all .setting_input {
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.setting_upload_all .set_label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -15px;
+  cursor: pointer;
+}
+.setting_upload_all .set_label .set_span {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.add_card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 60px;
+  background-color: white;
+  border-radius: 15px;
+  border: 2px solid #898D8D;
+  margin-top: 20px;
+  opacity: 0.5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.add_card:hover {
+  opacity: 1;
+}
+.add_card .add_card_title {
+  margin-top: 15px;
+}
+.add_card .add_card_icon {
+  font-size: 32px;
+}
+
+.friends_all {
+  margin-top: 20px;
+}
+.friends_all .friends_add {
+  padding: 55px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  border-radius: 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.friends_all .friends_add .friends_card_title {
+  margin-top: 5px;
+}
+.friends_all .friends_add:hover {
+  border: 2px solid #04060D;
+  border-radius: 20px;
+}
+.friends_all .friends__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.friends_all .friends__list .friends_item {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 20px;
+}
+.friends_all .friends__list .friends_item .friends_link .friends__img {
+  border-radius: 20px;
+}
+
+@media (max-width: 350px) {
+  .friends_item {
+    width: 75px;
+    height: 75px;
+  }
+  .friends_item .friends_add {
+    padding: 17px 20px;
+  }
+  .friends_item .friends__img {
+    height: 75px;
+    width: 75px;
+  }
 }
